@@ -18,9 +18,21 @@
 -include_lib("eunit/include/eunit.hrl").
 
 check_test() ->
-    false = luhn:check(<<"1212121213">>).
+    true = luhn:check(<<"1212121212">>),
+    false = luhn:check(<<"1212121213">>),
+    true = luhn:check(<<"0">>),
+    false = luhn:check(<<"1">>),
+    ok.
 
 sum_test() ->
-    2 = luhn:sum(<<"121212121">>).
+    2 = luhn:sum(<<"121212121">>),
+    8 = luhn:sum(<<"4711">>),
+    3 = luhn:sum(<<"7992739871">>),
+    ok.
+
+bork_test() ->
+    -1 = luhn:sum(<<"bork bork bork">>),
+    false = luhn:check(<<"">>),
+    ok.
 
 -endif.
