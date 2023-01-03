@@ -14,4 +14,10 @@
 
 -module(luhnch).
 
--export([]).
+-ifdef(TEST).
+-include_lib("eunit/include/eunit.hrl").
+
+add_test() ->
+    3 = luhn:add(1, 2).
+
+-endif.

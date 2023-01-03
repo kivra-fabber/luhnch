@@ -14,3 +14,9 @@ Build
 -----
 
     $ rebar3 compile
+
+
+Test
+----
+
+    $ ./test.sh
