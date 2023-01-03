@@ -10,3 +10,4 @@ name = "luhn"
 crate-type = ["dylib"]
 
 [dependencies]
+rustler = "0.26.0"
