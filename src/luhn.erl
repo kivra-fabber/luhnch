@@ -18,7 +18,8 @@
 -on_load(init/0).
 -export([init/0]).
 
--export([add/2]).
+-export([check/1]).
+-export([sum/1]).
 
 init() ->
     %% code:priv_dir/1 only works for a proper application, but
@@ -28,5 +29,11 @@ init() ->
     Priv = filename:join(ParentPath, "priv"),
     erlang:load_nif(filename:join(Priv, "libluhn"), none).
 
-add(_, _) ->
-    exit({not_loaded, [{module, ?MODULE}, {line, ?LINE}]}).
+check(_) ->
+    not_loaded(?FUNCTION_NAME).
+
+sum(_) ->
+    not_loaded(?FUNCTION_NAME).
+
+not_loaded(F) ->
+    exit({not_loaded, [{module, ?MODULE}, {function, F}]}).

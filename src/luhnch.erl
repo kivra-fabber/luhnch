@@ -17,7 +17,10 @@
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 
-add_test() ->
-    3 = luhn:add(1, 2).
+check_test() ->
+    false = luhn:check(<<"1212121213">>).
+
+sum_test() ->
+    2 = luhn:sum(<<"121212121">>).
 
 -endif.

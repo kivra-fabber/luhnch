@@ -1,14 +1,19 @@
 extern crate rustler;
 
-use rustler::{Env, Term};
+use rustler::{Env, Term, Binary};
 
 pub fn on_load(_env: Env, _load_info: Term) -> bool {
     true
 }
 
 #[rustler::nif]
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub fn check(_digits: Binary) -> bool {
+    false
 }
 
-rustler::init!("luhn", [add], load = on_load);
+#[rustler::nif]
+pub fn sum(_digits: Binary) -> u8 {
+    2
+}
+
+rustler::init!("luhn", [check, sum], load = on_load);
