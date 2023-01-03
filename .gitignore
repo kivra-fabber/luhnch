@@ -17,3 +17,7 @@ _build
 *.iml
 rebar3.crashdump
 *~
+
+# this is a local build artifact
+priv/libluhn.dylib
+priv/libluhn.so
