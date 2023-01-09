@@ -19,4 +19,10 @@ Build
 Test
 ----
 
+To run unit tests:
+
     $ ./test.sh
+
+To run benchmarks:
+
+    $ ./benchmark.escript
