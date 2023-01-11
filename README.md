@@ -1,7 +1,7 @@
 luhnch
 =====
 
-An OTP library
+A "one day" hack looking at how to make Rustler and NIFs work.
 
 Prerequisites
 -------------
@@ -10,8 +10,14 @@ Prerequisites
 * [Rebar 3](http://rebar3.org/docs/getting-started/)
 * [Rust](https://rustup.rs)
 
+There are only compiler hooks setup for macOS and Linux, but I'm sure things
+would work fine on Windows as well. Edit the `pre_hooks` in
+[rebar.config](./rebar.config) to add a "windows" variant.
+
 Build
 -----
+
+The Rebar3 config has hooks to build the Rust code, so you just need:
 
     $ rebar3 compile
 
