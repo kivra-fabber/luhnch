@@ -17,7 +17,7 @@ test(Digits, Duration, Unit) ->
     %% The Rust NIF
     RustOp = fun () -> luhn:sum(Digits) end,
     %% A simple Erlang implementation
-    ErlOp = fun () -> stdlib2:luhn(Digits) end,
+    ErlOp = fun () -> s2_hash:luhn(Digits) end,
 
     io:format("Duration: ~B ~p\n", [Duration, Unit]),
     io:format("    Data: ~p\n", [Digits]),

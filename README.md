@@ -26,3 +26,11 @@ To run unit tests:
 To run benchmarks:
 
     $ ./benchmark.escript
+
+Copyright
+---------
+
+Apache License Version 2.0, see the LICENSE file.
+
+The module s2_hash is copied straight out from
+https://github.com/kivra/stdlib2, also Apache 2.0

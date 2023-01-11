@@ -10,7 +10,7 @@ main(_Args) ->
 ready_to_go() ->
     try
         {module, luhn} = code:ensure_loaded(luhn),
-        {module, stdlib2} = code:ensure_loaded(stdlib2),
+        {module, s2_hash} = code:ensure_loaded(s2_hash),
         {module, benchmarks} = code:ensure_loaded(benchmarks),
         true
     catch
