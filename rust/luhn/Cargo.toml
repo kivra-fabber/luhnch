@@ -3,7 +3,7 @@ name = "luhn"
 version = "0.1.0"
 edition = "2021"
 authors = ["Fabian Bergström <fabian.bergstrom@kivra.com>"]
-license = "MIT/Apache-2.0"
+license = "Apache-2.0"
 
 [lib]
 name = "luhn"
